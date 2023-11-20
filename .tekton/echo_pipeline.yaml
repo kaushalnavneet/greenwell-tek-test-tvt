@@ -21,8 +21,7 @@ spec:
       nav: kaushal
       command: ['bash', '-c']
       args:
-        - echo 'Retries check:';
-          if [ "$(context.task.retry-count)" == "$(context.task.retry-count)" ]; then
+        - if [ "$(context.task.retry-count)" == "$(context.task.retry-count)" ]; then
           echo "This is the last retry."
           exit 0;
           fi
